@@ -32,14 +32,15 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         min-height: 100%;
+        color: var(--gray-color-5);
     }
 
     /* classes e estilos gerais */
     .container {
         margin: 0 auto;
         width: 100%;
-        padding: 0 15px;
-        max-width: 1200px;
+        padding: 0 1.6rem;
+        max-width: 120rem;
     }
 
     body, input, select, button, textarea {
