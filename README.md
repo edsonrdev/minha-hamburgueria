@@ -1,8 +1,5 @@
-# React + Vite
+# Minha Hamburgueria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HomePage de uma Hamburgueria, com pesquisa (por produtos e categorias de produtos), exibição do catálogo e um carrinho de produtos. O projeto foi criado com React JS e algumas de suas bibliotecas (Context API, Styled Components, React Icons e React Toastify).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link da aplicação: Hamburgueria
