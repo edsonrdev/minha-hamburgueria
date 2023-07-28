@@ -1,3 +1,10 @@
+import { GlobalStyles } from "./styles";
+
 export const App = () => {
-  return <h1>Olá Hamburgueria!</h1>;
+  return (
+    <>
+      <GlobalStyles />
+      <h1>Olá Hamburgueria!</h1>;
+    </>
+  );
 };
