@@ -12,6 +12,10 @@ export const Container = styled.form`
   border: 0.2rem solid var(--gray-color-2);
   border-radius: 1.3rem;
 
+  @media (max-width: 32.5rem) {
+    flex: 1;
+  }
+
   input {
     flex: 1;
     border: 0;
@@ -29,6 +33,7 @@ export const Container = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     svg {
       color: var(--white-color);

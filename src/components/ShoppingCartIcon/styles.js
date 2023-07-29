@@ -5,6 +5,12 @@ export const Container = styled.span`
   cursor: pointer;
   margin-top: 1.1rem;
 
+  @media (max-width: 32.5rem) {
+    position: absolute;
+    top: 1.2rem;
+    right: 2.6rem;
+  }
+
   span.quantity-products {
     position: absolute;
     top: -40%;

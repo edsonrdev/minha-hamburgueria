@@ -7,7 +7,7 @@ export const Header = () => {
     <Container>
       <div className="container">
         <h1>
-          Minha <span>Hamburgueria</span>
+          Minha <span>Burgueria</span>
         </h1>
 
         <div className="search-section">
