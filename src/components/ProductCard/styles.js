@@ -4,6 +4,12 @@ export const Container = styled.section`
   flex: 1 1 28rem;
   border: 0.2rem solid var(--gray-color-2);
   border-radius: 0.4rem;
+  transition: border-color 0.3s ease-in-out;
+  overflow: hidden;
+
+  &:hover {
+    border-color: var(--brand-color-1);
+  }
 
   header {
     display: flex;
