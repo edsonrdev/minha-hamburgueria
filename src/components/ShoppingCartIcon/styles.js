@@ -28,5 +28,9 @@ export const Container = styled.span`
     font-size: 2.4rem;
     color: var(--gray-color-3);
     vertical-align: middle;
+
+    /* &::before {
+      content: attr('');
+    } */
   }
 `;

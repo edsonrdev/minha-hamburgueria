@@ -5,6 +5,8 @@ export const Container = styled.section`
   border-radius: 0.4rem;
   transition: border-color 0.25s ease-in-out;
 
+  /* background-image: ${({ productimg }) => (productimg ? productimg : "")}; */
+
   &:hover {
     border-color: var(--brand-color-1);
 
@@ -34,9 +36,11 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
 
-    background: url("https://i.imgur.com/Vng6VzV.png"), var(--gray-color-1);
+    height: 18rem;
 
-    height: 17rem;
+    &.milkshake {
+      background-position: center top !important;
+    }
   }
 
   main {
