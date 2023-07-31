@@ -1,16 +1,16 @@
 import { Container } from "./styles";
 
-export const ProductCard = () => {
+export const ProductCard = ({ product }) => {
   return (
-    <Container>
-      <header>
-        <img src="https://i.imgur.com/Vng6VzV.png" alt="Hambúrguer" />
+    <Container key={product.id}>
+      <header data-img={product.img}>
+        {/* <img src={product.img} alt={product.name} /> */}
       </header>
 
       <main>
-        <h2>Hambúrguer</h2>
-        <span className="category">Sanduíches</span>
-        <span className="price">R$ 14.00</span>
+        <h2>{product.name}</h2>
+        <span className="category">{product.category}</span>
+        <span className="price">{product.price.toFixed(2)}</span>
         <button>Adicionar</button>
       </main>
     </Container>

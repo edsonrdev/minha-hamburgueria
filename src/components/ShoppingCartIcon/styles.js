@@ -8,7 +8,7 @@ export const Container = styled.span`
   @media (max-width: 32.5rem) {
     position: absolute;
     top: 1.2rem;
-    right: 2.6rem;
+    right: 2.7rem;
   }
 
   span.quantity-products {

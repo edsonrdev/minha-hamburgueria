@@ -34,7 +34,9 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
 
-    background: var(--gray-color-1);
+    background: url("https://i.imgur.com/Vng6VzV.png"), var(--gray-color-1);
+
+    height: 17rem;
   }
 
   main {
