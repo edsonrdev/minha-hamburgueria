@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext } from "react";
+import { useState, useEffect, createContext } from "react";
 import { api } from "../../services/api";
 
 export const ProductsContext = createContext();
@@ -25,7 +25,3 @@ export const ProductsProvider = ({ children }) => {
     </ProductsContext.Provider>
   );
 };
-
-// export const useProductsContext = () => {
-//   return useContext(ProductsContext);
-// };

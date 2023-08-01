@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.form`
+export const Container = styled.div`
   width: 30rem;
   min-height: 5rem;
   padding: 0.5rem;
@@ -26,14 +26,18 @@ export const Container = styled.form`
 
   button {
     flex-basis: 4.5rem;
-    background: var(--brand-color-1);
     border: 0;
     border-radius: 0.7rem;
+    background: var(--brand-color-1);
 
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    &.search-done {
+      background: var(--negative-color);
+    }
 
     svg {
       color: var(--white-color);

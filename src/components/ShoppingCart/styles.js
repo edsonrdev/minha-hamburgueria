@@ -3,11 +3,19 @@ import { styled } from "styled-components";
 export const Container = styled.ul`
   min-width: 35rem;
 
+  main {
+    padding-bottom: 1.5rem;
+    border-bottom: 0.1rem solid var(--gray-color-2);
+  }
+
   ul {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     height: 27rem;
+
+    /* padding-bottom: 1.25rem; */
+    /* border-bottom: 0.1rem solid var(--gray-color-2); */
 
     /* background: red; */
     overflow: auto;
@@ -71,6 +79,44 @@ export const Container = styled.ul`
 
       &:hover {
         color: var(--negative-color);
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    .section-total {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 1.6rem 0;
+
+      font-size: 1.4rem;
+
+      .total-label {
+        font-weight: 600;
+      }
+
+      .total-value {
+        font-weight: 400;
+      }
+    }
+
+    button {
+      padding: 1.8rem;
+      color: var(--white-color);
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      border-radius: 0.5rem;
+      background: var(--gray-color-3);
+      border: 0;
+      cursor: pointer;
+      transition: background 0.25s ease-in-out;
+
+      &:hover {
+        background: var(--brand-color-1-hover);
       }
     }
   }

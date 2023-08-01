@@ -18,9 +18,6 @@ export const Background = styled.div`
 `;
 
 export const Content = styled.div`
-  /* width: 32rem;
-  height: 32rem; */
-
   background: var(--white-color);
   box-shadow: 0 0.5rem 0.8rem 0.15rem var(--gray-color-4);
   border-radius: 0.4rem;
