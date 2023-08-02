@@ -1,24 +1,39 @@
 import { useContext, useState } from "react";
-import { ProductsContext } from "../../providers/products";
 
 import { Container } from "./styles";
 import { FaSearch } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { toast } from "react-toastify";
 
+import { ProductsContext } from "../../providers/products";
+import { ProductNotFoundContext } from "../../providers/productNotFound";
+import { FilteredProductsContext } from "../../providers/filteredProducts";
+import { SearchTextContext } from "../../providers/searchText";
+
 export const SearchForm = () => {
   const { products, setProducts } = useContext(ProductsContext);
+  const { filteredProducts, setFilteredProducts } = useContext(
+    FilteredProductsContext
+  );
+  const { productNotFound, setProductNotFound } = useContext(
+    ProductNotFoundContext
+  );
+  const { searchText, setSearchText } = useContext(SearchTextContext);
 
-  const [searchText, setSearchText] = useState("");
   const [searchDone, setSearchDone] = useState(false);
 
   const handleSearchProducts = () => {
-    if (!searchText && searchDone) {
-      setSearchDone(false);
-    }
-
     if (!searchText) {
       toast.error("Informe nome ou categoria do produto...");
+      setSearchDone(false);
+      return false;
+    }
+
+    if (searchDone) {
+      setSearchText("");
+      setSearchDone(false);
+      setFilteredProducts([]);
+      setProductNotFound(false);
       return false;
     }
 
@@ -28,26 +43,29 @@ export const SearchForm = () => {
         product.category.toLowerCase().includes(searchText.toLowerCase())
     );
 
-    if (filteredProducts.length) {
-      setProducts(filteredProducts);
+    setFilteredProducts(filteredProducts);
+
+    if (!filteredProducts.length) {
+      setProductNotFound(true);
     }
 
-    // setSearchText("");
     setSearchDone(true);
   };
 
   return (
     <Container>
       <input
+        autoFocus
         type="search"
         placeholder="Pesquisar produtos..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
+        disabled={searchDone && searchText ? true : false}
       />
       <button
         type="submit"
         onClick={handleSearchProducts}
-        className={`${searchDone ? "search-done" : ""}`}
+        className={`${!searchDone ? "before-search" : "after-search"}`}
       >
         {!searchDone ? <FaSearch /> : <MdClose size={18} />}
       </button>

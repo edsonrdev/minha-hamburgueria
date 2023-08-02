@@ -1,6 +1,13 @@
+import { useContext } from "react";
+import { CartProductsContext } from "../../providers/cartProducts";
+
 import { Container } from "./styles";
 
 export const ProductCard = ({ product }) => {
+  const { cartProducts, handleAddToCart } = useContext(CartProductsContext);
+
+  console.log(cartProducts);
+
   return (
     <Container key={product.id}>
       <header
@@ -19,7 +26,7 @@ export const ProductCard = ({ product }) => {
         <h2>{product.name}</h2>
         <span className="category">{product.category}</span>
         <span className="price">R$ {product.price.toFixed(2)}</span>
-        <button>Adicionar</button>
+        <button onClick={() => handleAddToCart(product)}>Adicionar</button>
       </main>
     </Container>
   );

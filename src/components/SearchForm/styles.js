@@ -22,6 +22,11 @@ export const Container = styled.div`
     outline: 0;
     font-size: 1.5rem;
     padding: 0 0.4rem;
+
+    &:disabled {
+      background: var(--white-color);
+      cursor: not-allowed;
+    }
   }
 
   button {
@@ -35,7 +40,11 @@ export const Container = styled.div`
     justify-content: center;
     cursor: pointer;
 
-    &.search-done {
+    &.before-search {
+      background: var(--brand-color-1);
+    }
+
+    &.after-search {
       background: var(--negative-color);
     }
 

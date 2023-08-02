@@ -15,6 +15,10 @@ export const Container = styled.ul`
       overflow-x: auto;
     }
 
+    &:first-of-type {
+      padding: 0 1.6rem;
+    }
+
     &::-webkit-scrollbar {
       height: 1.4rem;
     }
@@ -33,9 +37,15 @@ export const Container = styled.ul`
       border-radius: 100px;
     }
 
-    div {
-      flex: 1;
-      border: 1px solid;
+    h2.search-results-title {
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      font-weight: 400;
+
+      span {
+        font-weight: 700;
+        color: var(--brand-color-2);
+      }
     }
   }
 `;
