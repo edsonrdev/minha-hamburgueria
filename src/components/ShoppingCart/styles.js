@@ -86,9 +86,28 @@ export const Container = styled.ul`
         border-bottom: 0.1rem solid var(--gray-color-2);
       }
 
-      .product-name {
-        font-weight: 600;
-        font-size: 1.5rem;
+      .product-info {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        .product-name {
+          font-weight: 700;
+          font-size: 1.4rem;
+
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 13.5rem;
+        }
+
+        .product-price {
+          font-weight: 500;
+          font-size: 1.2rem;
+          color: var(--brand-color-1);
+        }
       }
     }
 
@@ -122,11 +141,14 @@ export const Container = styled.ul`
       font-size: 1.4rem;
 
       .total-label {
-        font-weight: 600;
+        font-weight: 700;
+        font-size: 1.4rem;
       }
 
       .total-value {
-        font-weight: 400;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: var(--brand-color-1);
       }
     }
 

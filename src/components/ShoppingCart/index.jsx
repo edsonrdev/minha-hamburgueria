@@ -24,8 +24,13 @@ export const ShoppingCart = () => {
               {cartProducts.map((product) => (
                 <li key={product.id}>
                   <img src={product.img} alt={product.name} />
-                  <span className="product-name">{product.name}</span>
-                  <FaTrash onClick={() => handleRemoveProduct(product)} />
+                  <div className="product-info">
+                    <span className="product-name">{product.name}</span>
+                    <span className="product-price">
+                      R$ {product.price.toFixed(2)}
+                    </span>
+                    <FaTrash onClick={() => handleRemoveProduct(product)} />
+                  </div>
                 </li>
               ))}
             </ul>
