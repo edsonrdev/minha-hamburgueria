@@ -14,8 +14,9 @@ export const CartProductsProvider = ({ children }) => {
 
     if (!productHasIntoCart) {
       setCartProducts([...cartProducts, productToAdd]);
+      toast.success("Produto adicionado ao carrinho!");
     } else {
-      toast.error("Este produto já foi adicionado ao carrinho!");
+      toast.error("O produto já está no carrinho!");
     }
   };
 

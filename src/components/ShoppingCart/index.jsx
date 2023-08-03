@@ -3,6 +3,7 @@ import { CartProductsContext } from "../../providers/cartProducts";
 
 import { Container } from "./styles";
 import { FaTrash } from "react-icons/fa";
+import { BiPlus } from "react-icons/bi";
 
 export const ShoppingCart = () => {
   const { cartProducts, handleRemoveAllProducts, handleRemoveProduct } =
@@ -12,8 +13,6 @@ export const ShoppingCart = () => {
     (sum, product) => sum + product.price,
     0
   );
-
-  // console.log(totalCartValue);
 
   return (
     <Container>
@@ -48,7 +47,7 @@ export const ShoppingCart = () => {
         </>
       ) : (
         <main className="empty-cart">
-          <h2>Seu carrinho está vazio.</h2>
+          <h2>Seu carrinho está vazio</h2>
 
           <p>Adicione itens ao carrinho.</p>
         </main>

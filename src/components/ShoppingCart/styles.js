@@ -16,7 +16,6 @@ export const Container = styled.ul`
       font-size: 2rem;
       text-align: center;
       color: var(--gray-color-4);
-      /* line-height: 2.7rem; */
     }
 
     p {
@@ -32,13 +31,8 @@ export const Container = styled.ul`
   ul {
     display: flex;
     flex-direction: column;
-    /* gap: 1.25rem; */
-    height: 25rem;
+    height: 24rem;
 
-    /* padding-bottom: 1.25rem; */
-    /* border-bottom: 0.1rem solid var(--gray-color-2); */
-
-    /* background: red; */
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -88,6 +82,7 @@ export const Container = styled.ul`
 
       .product-info {
         flex: 1;
+        position: relative;
 
         display: flex;
         flex-direction: column;
@@ -108,22 +103,30 @@ export const Container = styled.ul`
           font-size: 1.2rem;
           color: var(--brand-color-1);
         }
-      }
-    }
 
-    svg {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
+        input {
+          border: 0.1rem solid var(--gray-color-2);
+          font-size: 1.2rem;
+          width: 4rem;
+          text-align: center;
+          outline: none;
+        }
 
-      color: var(--gray-color-3);
-      font-size: 1.5rem;
+        svg {
+          position: absolute;
+          top: 0;
+          right: 0;
 
-      cursor: pointer;
-      transition: color 0.3s ease-in-out;
+          color: var(--gray-color-3);
+          font-size: 1.5rem;
 
-      &:hover {
-        color: var(--negative-color);
+          cursor: pointer;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--negative-color);
+          }
+        }
       }
     }
   }
@@ -158,7 +161,7 @@ export const Container = styled.ul`
       font-weight: 500;
       letter-spacing: 0.05rem;
       border-radius: 0.5rem;
-      background: var(--gray-color-3);
+      background: var(--brand-color-1);
       border: 0;
       cursor: pointer;
       transition: background 0.25s ease-in-out;

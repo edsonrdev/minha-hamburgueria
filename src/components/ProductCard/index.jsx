@@ -6,8 +6,6 @@ import { Container } from "./styles";
 export const ProductCard = ({ product }) => {
   const { cartProducts, handleAddToCart } = useContext(CartProductsContext);
 
-  // console.log(cartProducts);
-
   return (
     <Container key={product.id}>
       <header

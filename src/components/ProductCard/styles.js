@@ -73,7 +73,7 @@ export const Container = styled.section`
       font-weight: 500;
       letter-spacing: 0.05rem;
       border-radius: 0.5rem;
-      background: var(--gray-color-3);
+      background: var(--brand-color-1);
       border: 0;
       cursor: pointer;
       transition: background 0.25s ease-in-out;
