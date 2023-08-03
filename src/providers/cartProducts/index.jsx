@@ -19,9 +19,27 @@ export const CartProductsProvider = ({ children }) => {
     }
   };
 
+  const handleRemoveProduct = (productToRemove) => {
+    const newCartProducts = cartProducts.filter(
+      (product) => product !== productToRemove
+    );
+
+    setCartProducts(newCartProducts);
+  };
+
+  const handleRemoveAllProducts = () => {
+    setCartProducts([]);
+  };
+
   return (
     <CartProductsContext.Provider
-      value={{ cartProducts, setCartProducts, handleAddToCart }}
+      value={{
+        cartProducts,
+        setCartProducts,
+        handleAddToCart,
+        handleRemoveAllProducts,
+        handleRemoveProduct,
+      }}
     >
       {children}
     </CartProductsContext.Provider>

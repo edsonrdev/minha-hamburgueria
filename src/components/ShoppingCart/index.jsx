@@ -5,7 +5,15 @@ import { Container } from "./styles";
 import { FaTrash } from "react-icons/fa";
 
 export const ShoppingCart = () => {
-  const { cartProducts } = useContext(CartProductsContext);
+  const { cartProducts, handleRemoveAllProducts, handleRemoveProduct } =
+    useContext(CartProductsContext);
+
+  const totalCartValue = cartProducts.reduce(
+    (sum, product) => sum + product.price,
+    0
+  );
+
+  // console.log(totalCartValue);
 
   return (
     <Container>
@@ -17,7 +25,7 @@ export const ShoppingCart = () => {
                 <li key={product.id}>
                   <img src={product.img} alt={product.name} />
                   <span className="product-name">{product.name}</span>
-                  <FaTrash />
+                  <FaTrash onClick={() => handleRemoveProduct(product)} />
                 </li>
               ))}
             </ul>
@@ -25,14 +33,20 @@ export const ShoppingCart = () => {
           <footer>
             <div className="section-total">
               <span className="total-label">Total:</span>
-              <span className="total-value">R$ 50.00</span>
+              <span className="total-value">
+                R$ {totalCartValue.toFixed(2)}
+              </span>
             </div>
 
-            <button>Remover todos</button>
+            <button onClick={handleRemoveAllProducts}>Remover todos</button>
           </footer>
         </>
       ) : (
-        ""
+        <main className="empty-cart">
+          <h2>Seu carrinho está vazio.</h2>
+
+          <p>Adicione itens ao carrinho.</p>
+        </main>
       )}
     </Container>
   );

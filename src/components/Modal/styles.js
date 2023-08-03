@@ -1,4 +1,15 @@
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
+
+const showModal = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Background = styled.div`
   position: absolute;
@@ -18,9 +29,13 @@ export const Background = styled.div`
 `;
 
 export const Content = styled.div`
+  animation: ${showModal} 0.2s forwards;
   background: var(--white-color);
   box-shadow: 0 0.5rem 0.8rem 0.15rem var(--gray-color-4);
   border-radius: 0.4rem;
+
+  min-width: 32rem;
+  max-width: 100%;
 
   overflow: hidden;
 
