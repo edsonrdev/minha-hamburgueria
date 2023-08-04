@@ -9,7 +9,7 @@ export const Container = styled.header`
     font-size: 2.5rem;
 
     span {
-      color: var(--brand-color-2);
+      color: var(--brand-color-1);
       font-weight: 600;
       letter-spacing: 0;
       font-size: 2rem;

@@ -44,7 +44,7 @@ export const Container = styled.ul`
 
       span {
         font-weight: 700;
-        color: var(--brand-color-2);
+        color: var(--brand-color-1);
       }
     }
   }

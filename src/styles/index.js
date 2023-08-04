@@ -8,9 +8,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --brand-color-1: #27AE60;
-        --brand-color-2: #FF6E5E;
-        --brand-color-1-hover: #93D7AF;
+        --brand-color-1: #FF6E5E;
+        --brand-color-1-hover: #e64330;
 
         --gray-color-1: #F5F5F5;
         --gray-color-2: #D7D7D7;
